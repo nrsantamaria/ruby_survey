@@ -1,0 +1,18 @@
+<h2><%= @survey.name %></h2>
+<hr>
+<% @questions.each do |question|%>
+  <form action="/">
+    <p>
+      <h4><%= question.description %></h4>
+      <% question.answers.each do |answer| %>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" name="answer_id"><%= answer.description %>
+          </label>
+        </div>
+      <% end %>
+    </p>
+    <button type="submit">Submit</button>
+  </form>
+  <br>
+<% end %>

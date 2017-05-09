@@ -124,3 +124,9 @@ get "/take_surveys" do
   @surveys = Survey.all
   erb :take_surveys_home
 end
+
+get "/surveys/:id/take" do
+  @survey = Survey.find(params.fetch("id").to_i)
+  @questions = @survey.questions()
+  erb(:survey_take)
+end

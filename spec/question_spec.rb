@@ -17,4 +17,14 @@ describe(Question) do
       expect(test_question.survey()).to(eq(test_survey))
     end
   end
+
+  describe("#select_answer") do
+    it("counts how many times an answer is selected") do
+      test_question = Question.create({:description => "What is your favorite breed of dog"})
+      test_answer1 = Answer.create({:description => "Grey Hound", :question_id => test_question.id, :selected => 0})
+      test_question.select_answer()
+      expect(test_answer1.selected()).to(eq(1))
+    end
+  end
+
 end

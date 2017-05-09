@@ -1,0 +1,38 @@
+<h3> <%= @question.description() %> </h3>
+
+<form action="/questions/<%= @question.id %>/answers" method="post">
+  <input type="hidden" name="question_id" value="<%= @question.id %>">
+  <label for="answer_name">Add an answer:</label>
+  <input name="answer_name" type="text">
+
+  <button type="submit">Add Answer</button>
+</form>
+
+
+<% if @question.answers.any?() %>
+  <h3>Here are all the answers for this question:</h3>
+
+  <ul>
+    <% @question.answers.each() do |answer| %>
+    <li><a href="/answers/<%= answer.id %>"><%= answer.description %></a></li>
+  <% end %>
+  </ul>
+
+<% else %>
+  <p>There are no answers yet!</p>
+<% end %>
+
+<h3>Update Question:</h3>
+<form action="/questions/<%= @question.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <label for="new_question">Change Question:</label>
+  <input type="text" name="new_question">
+
+  <button type="submit">Update</button>
+</form>
+
+<h2>Delete Question:</h2>
+<form action="/questions/<%= @question.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button type="submit">Delete</button>
+</form>

@@ -1,0 +1,14 @@
+<form action="/surveys" method="post">
+  <label for="survey_name">Add survey name:</label>
+  <input name="survey_name" type="text">
+
+  <button type="submit">Add Survey</button>
+</form>
+
+<h4>Here are all the surveys:</h4>
+
+<% @surveys.each do |survey| %>
+  <ul>
+    <li><a href="/surveys/<%= survey.id %>"><%= survey.name %></a></li>
+  </ul>
+<% end %>

@@ -1,0 +1,19 @@
+<h3>Survey: <%= @survey.name %></h3>
+
+<h4>Question: <%= @question.description %></h4>
+
+<h2>Answer: <%= @answer.description %></h2>
+
+<form action="/answers/<%= @answer.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <label for="new_answer">Change Answer:</label>
+  <input type="text" name="new_answer">
+
+  <button type="submit">Update</button>
+</form>
+
+<h2>Delete Answer:</h2>
+<form action="/answers/<%= @answer.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button type="submit">Delete</button>
+</form>

@@ -1,18 +1,28 @@
-# <!--PROJECT NAME HERE-->
+# Ruby Survey
 
-<!--PROJECT DESCRIPTION HERE-->
+#### By _**Nicole Santamaria** and **Steven Galvin**_
+
+## Description
+An app to create and take surveys.
 
 ### Prerequisites
 
 Web browser with ES6 compatibility
 Examples: Chrome, Safari
 
-Ruby <!--VERSION HERE-->
+Ruby
 Bundler
 
 ### Installing
 
-Installation is quick and easy! First you can open this link <!--HEROKU LINK HERE--> to see the webpage in action live online. Or you can clone this repository to your machine, navigate to the file path in your terminal, and run 'app.rb' by typing '$ruby app.rb'. If you chose to clone the repository, after you run 'app.rb' you will need to copy the localhost path into your web browser. The standard localhost for Sinatra is port 4567
+* Clone repository: `$ git clone https://github.com/nrsantamaria/ruby_survey`
+* Navigate to folder: `$ cd ruby_survey`
+* Install gems: `$ bundle install`
+* In a separate tab start postgres: `$ postgres`
+* Set up the database: `$ rake db:create`
+* Create tables: `$ rake db:migrate db:test:prepare`
+* Start server: `$ ruby app.rb`
+* In your browser visit: `localhost:4567`
 
 ## Built With
 
@@ -24,31 +34,17 @@ Installation is quick and easy! First you can open this link <!--HEROKU LINK HER
 * ES6
 * Jquery https://jquery.com/
 
-## Authors
+## Known Bugs
 
-* <!--YOUR NAME HERE-->
+_No known bugs._
 
-## License
+## Support and contact details
 
-MIT License
+_Please contact Nicole Santamaria at NicoleRSantamaria@gmail.com if you have any questions._
 
-Copyright (c) <!--YOUR NAME & YEAR HERE-->
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+### License
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+*This software is licensed under MIT license.*
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
+Copyright (c) 2017 **_Nicole Santamaria_**
